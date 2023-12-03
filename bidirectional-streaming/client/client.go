@@ -1,4 +1,3 @@
-// client.go
 package main
 
 import (
@@ -7,7 +6,7 @@ import (
 	"log"
 	"time"
 	"google.golang.org/grpc"
-	proto "main/proto"// proto 파일의 실제 위치로 변경해야 합니다.
+	proto "main/proto"
 )
 
 func makeMessage(message string) *proto.Message {

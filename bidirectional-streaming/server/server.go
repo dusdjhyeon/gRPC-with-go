@@ -14,6 +14,7 @@ type server struct {
 }
 
 func (s *server) GetServerResponse(stream proto.Bidirectional_GetServerResponseServer) error {
+	log.Printf("Server processing gRPC bidirectional streaming.")
 	messages := make([]*proto.Message, 0)
 	for {
 		message, err := stream.Recv()
@@ -28,7 +29,6 @@ func (s *server) GetServerResponse(stream proto.Bidirectional_GetServerResponseS
 		if err != nil {
 			return err
 		}
-		log.Printf("Received: %v", message.Message)
 		messages = append(messages, message)
 	}
 }
