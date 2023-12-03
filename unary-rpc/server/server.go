@@ -1,4 +1,3 @@
-// server.go
 package main
 
 import (
@@ -15,7 +14,6 @@ type server struct {
 }
 
 func (s *server) MyFunction(ctx context.Context, in *proto.MyNumber) (*proto.MyNumber, error) {
-    log.Printf("Received: %v", in.GetValue())
 	result := pb.MyFunc(in.Value)
     return &proto.MyNumber{Value: result}, nil
 }
