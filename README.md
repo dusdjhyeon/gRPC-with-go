@@ -1,4 +1,4 @@
-![client-streaming](https://github.com/dusdjhyeon/gRPC-with-go/assets/73868703/d0e30bfa-6961-4755-94c1-f590689043bc)# gRPC-with-go
+# gRPC-with-go
 
 There is a source code that implements the four communication methods of gRPC in Golang.
 - Unary gRPC (no streaming)
